@@ -17,6 +17,7 @@ $link: $color-primary;
 @import "./component/_gallery.scss";
 
 // 各セクション
+@import "./section/_about-section.scss";
 @import "./section/_news-section.scss";
 @import "./section/_gallery-section.scss";
 @import "./section/_contact-section.scss";
