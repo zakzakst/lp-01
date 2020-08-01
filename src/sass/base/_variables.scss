@@ -1,3 +1,16 @@
+// 色の設定
+$color-primary: #00bfa6;
+$color-base: #fff;
+
+// フォントサイズの設定
+$font-size-sm: 14px;
+$font-size-default: 16px;
+
+// トランジションの設定
+$transition-fast: .3s;
+$transition-default: .5s;
+$transition-slow: 1s;
+
 // z-indexの数値
 $z-go-top: 100 !default;
 $z-header-nav: 101 !default;

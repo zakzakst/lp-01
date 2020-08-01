@@ -28,8 +28,8 @@
     "webpack-stream": "^5.2.1"
   },
   "dependencies": {
-    "@barba/core": "^2.9.7",
     "bulma": "^0.8.2",
+    "gsap": "^3.4.2",
     "jquery": "^3.5.1"
   },
   "description": ""

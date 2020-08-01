@@ -3,6 +3,7 @@
 
 // 変数
 @import "./base/_variables.scss";
+@import "./base/_common.scss";
 
 // 共通
 @import "./common/_utility.scss";
@@ -12,5 +13,3 @@
 
 // 各種パーツ
 @import "./component/_news-list.scss";
-
-// 各ページ用
