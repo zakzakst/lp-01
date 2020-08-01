@@ -1,0 +1,72 @@
+<div class="contact-section">
+  <div class="container">
+    <h2 class="contact-section__title">CONTACT</h2>
+    <div class="columns is-tablet is-centered">
+      <div class="column is-two-thirds-tablet">
+        <form action="" id="js-contact-form">
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="contact-section__label label">お名前</label>
+            </div>
+            <div class="field-body">
+              <div class="field">
+                <div class="control">
+                  <input name="name" class="js-contact-check input" type="text" placeholder="山田 太郎">
+                </div>
+                <p class="js-contact-alert help is-danger">入力必須項目です。</p>
+              </div>
+            </div>
+          </div>
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="contact-section__label label">メールアドレス</label>
+            </div>
+            <div class="field-body">
+              <div class="field">
+                <div class="control">
+                  <input name="mail" class="js-contact-check input" type="text" placeholder="sample@mail.com">
+                </div>
+                <p class="js-contact-alert help is-danger">入力必須項目です。</p>
+              </div>
+            </div>
+          </div>
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="contact-section__label label">項目</label>
+            </div>
+            <div class="field-body">
+              <div class="field is-narrow">
+                <div class="control">
+                  <div class="select is-fullwidth">
+                    <select name="content">
+                      <option value="">選択してください</option>
+                      <option value="01" selected>商品についての質問</option>
+                      <option value="02">業務のご依頼</option>
+                      <option value="03">その他</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="contact-section__label label">内容</label>
+            </div>
+            <div class="field-body">
+              <div class="field">
+                <div class="control">
+                  <textarea name="text" class="js-contact-check textarea" placeholder="お問い合わせ内容を記載してください。"></textarea>
+                </div>
+                <p class="js-contact-alert help is-danger">入力必須項目です。</p>
+              </div>
+            </div>
+          </div>
+          <div class="has-text-centered">
+            <button type="submit" class="contact-section__btn">送信する</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
