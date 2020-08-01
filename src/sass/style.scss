@@ -1,11 +1,12 @@
-// ライブラリ
-@import "../../node_modules/bulma/bulma.sass";
-
 // 変数
 @import "./base/_variables.scss";
-@import "./base/_common.scss";
+
+// ライブラリ
+$link: $color-primary;
+@import "../../node_modules/bulma/bulma.sass";
 
 // 共通
+@import "./base/_common.scss";
 @import "./common/_utility.scss";
 @import "./common/_layout.scss";
 @import "./common/_header.scss";
@@ -18,3 +19,4 @@
 // 各セクション
 @import "./section/_news-section.scss";
 @import "./section/_gallery-section.scss";
+@import "./section/_contact-section.scss";
