@@ -15,7 +15,11 @@
 {%- endblock %}
 
 {% block main_content %}
-{% include '_module/page/top-content.njk' %}
+<main>
+<div class="spacer"></div>
+{% include '_module/section/news-section.njk' %}
+<div class="spacer"></div>
+</main>
 {% endblock %}
 
 {% block foot_files -%}

@@ -1,15 +1,18 @@
 {% macro normal(newsData) -%}
-<div class="columns news-list">
+<ul class="news-list columns is-multiline">
 {%- for item in newsData -%}
-  <div class="column is-one-third content tablet-column">
-    <a href="{{ item.link }}">
-      <p class="image is-2by1">
-        <img src="{{ item.img }}" alt="{{ item.alt }}">
-        <p class="title is-4">{{ item.title }}</p>
-        <p class="subtitle is-6">{{ item.text }}</p>
+  <li class="column is-one-third">
+    <div class="news-item">
+      <p class="news-item__img">
+        <img src="{{ item.img }}" width="200" height="100" alt="{{ item.alt }}">
       </p>
-    </a>
-  </div>
+      <div class="news-item__body">
+        <h3 class="news-item__ttl">{{ item.title }}</h3>
+        <p class="news-item__txt">{{ item.text }}</p>
+      </div>
+      <p class="news-item__link"><a href="{{ item.link }}" class="news-item__link-item">READ MORE</a></p>
+    </div>
+  </li>
 {%- endfor -%}
-</div>
+</ul>
 {%- endmacro %}
