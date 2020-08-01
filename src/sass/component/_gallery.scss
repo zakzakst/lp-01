@@ -1,0 +1,70 @@
+.gallery > li {
+  opacity: 0;
+}
+
+.gallery-item {
+  position: relative;
+  display: block;
+  background: $color-primary--darker;
+}
+
+.gallery-item__img {
+  width: 100%;
+  transition: opacity $transition-fast;
+}
+
+$gallery-item-ttl-offset: 20px;
+$gallery-item-txt-color: #fff;
+.gallery-item__ttl {
+  position: absolute;
+  display: flex;
+  top: $gallery-item-ttl-offset;
+  bottom: $gallery-item-ttl-offset;
+  left: $gallery-item-ttl-offset;
+  right: $gallery-item-ttl-offset;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  & > span {
+    color: $gallery-item-txt-color;
+    opacity: 0;
+    transition: opacity $transition-fast;
+  }
+  &::before,
+  &::after {
+    position: absolute;
+    content: '';
+    display: block;
+    height: 1px;
+    background: $gallery-item-txt-color;
+  }
+  &::before {
+    top: 0;
+    left: 0;
+    right: 100%;
+    transition: right $transition-fast;
+  }
+  &::after {
+    bottom: 0;
+    left: 100%;
+    right: 0;
+    transition: left $transition-fast;
+  }
+}
+
+.gallery-item:hover {
+  & > .gallery-item__img {
+    opacity: .3;
+  }
+  & > .gallery-item__ttl {
+    & > span {
+      opacity: 1;
+    }
+    &::before {
+      right: 0;
+    }
+    &::after {
+      left: 0;
+    }
+  }
+}
