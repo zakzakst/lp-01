@@ -7,9 +7,25 @@ gsap.registerPlugin(ScrollTrigger);
 export function scrollAnim() {
   newsSectionAnim();
   gallerySectionAnim();
+  aboutSectionAnim();
+}
+
+function aboutSectionAnim() {
+  if(!$('.about-section').length) return;
+  $('.about-section .columns').each((index, el) => {
+    ScrollTrigger.create({
+      trigger: el,
+      start: "top 70%",
+      onEnter: self => {
+        $(self.trigger).addClass('is-animated');
+        self.kill();
+      }
+    });
+  })
 }
 
 function newsSectionAnim() {
+  if(!$('.news-list').length) return;
   ScrollTrigger.create({
     trigger: ".news-list",
     start: "top 70%",
@@ -21,6 +37,7 @@ function newsSectionAnim() {
 }
 
 function gallerySectionAnim() {
+  if(!$('.gallery').length) return;
   ScrollTrigger.create({
     trigger: ".gallery",
     start: "top 70%",
