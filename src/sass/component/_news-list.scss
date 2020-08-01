@@ -72,7 +72,7 @@ $news-item-transition-cover-delay: .3s;
   padding: 0 24px 8px 8px;
   font-size: $font-size-sm;
   color: $color-primary;
-  transition: padding $transition-default;
+  transition: padding $transition-fast;
   &:hover {
     padding-left: 16px;
     padding-right: 32px;

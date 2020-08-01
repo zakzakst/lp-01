@@ -1,0 +1,12 @@
+{% macro normal(galleryData) -%}
+<ul class="gallery columns is-multiline">
+{%- for item in galleryData -%}
+  <li class="column is-one-quarter">
+    <a href="{{ item.link }}" class="gallery-item">
+      <img class="gallery-item__img" src="{{ item.img }}" alt="{{ item.alt }}" width="200" height="100">
+      <p class="gallery-item__ttl"><span>{{ item.title }}</span></p>
+    </a>
+  </li>
+{%- endfor -%}
+</ul>
+{%- endmacro %}
