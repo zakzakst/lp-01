@@ -9,7 +9,7 @@ $about-transition-content-cover-delay: .6s;
 
 .about__ttl {
   margin-bottom: 8px;
-  font-size: 24px;
+  font-size: $font-size-xl;
 }
 
 .about__txt:not(:last-child) {
