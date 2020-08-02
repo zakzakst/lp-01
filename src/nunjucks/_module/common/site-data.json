@@ -1,34 +1,12 @@
 {
   "siteData": {
     "name": "★★サイト名★★",
-    "url": "https://www.xxx/",
+    "domain": "https://www.xxx/",
     "viewport": "width=device-width, initial-scale=1",
     "twitterCard": "summary_large_image",
     "twitterSite": "@xxxxx",
     "shortcutIcon": "https://www.xxx/path/to/favicon.ico",
     "appleIcon": "https://www.xxx/path/to/apple-touch-icon.png",
-    "ogImage": "https://www.xxx/path/to/ogp.png",
-    "navList": [
-      {
-        "name": "top",
-        "label": "Top",
-        "path": "/"
-      },
-      {
-        "name": "about",
-        "label": "About",
-        "path": "/about/"
-      },
-      {
-        "name": "menu",
-        "label": "Menu",
-        "path": "/menu/"
-      },
-      {
-        "name": "news",
-        "label": "News",
-        "path": "/news/"
-      }
-    ]
+    "ogImage": "https://www.xxx/path/to/ogp.png"
   }
 }

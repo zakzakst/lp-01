@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <!-- メタデータ -->
-  {# {% include '../_module/common/meta.njk' %} #}
+  {% include '../_module/common/meta.njk' %}
 
   <!-- 読み込みファイル -->
   {% block head_files -%}
@@ -10,7 +10,7 @@
   {%- endblock %}
 
   <!-- 構造化データ -->
-  {# {% include '../_module/common/schema.njk' %} #}
+  {% include '../_module/common/schema.njk' %}
 
   <!-- ロード画面関連の記述 -->
   {# {% include '../_module/common/page-loader-head.njk' %} #}
@@ -22,17 +22,16 @@
 
   <!-- ヘッダー -->
   {# {% include '../_module/common/header.njk' %} #}
-  {# {% include '../_module/hero.njk' %} #}
 
   <!-- メインコンテンツ -->
   {% block main_content %}
   {% endblock %}
 
   <!-- フッター -->
-  {# {% include '../_module/common/footer.njk' %} #}
+  {% include '../_module/common/footer.njk' %}
 
   <!-- トップへ戻る -->
-  {# {% include '../_module/common/go-top.njk' %} #}
+  {% include '../_module/common/go-top.njk' %}
 
   <!-- 読み込みファイル -->
   {% block foot_files -%}
