@@ -1,0 +1,28 @@
+{%- import '../../_module/news-list.njk' as newsList -%}
+{%- set newsData = [
+  {
+    title: 'タイトル',
+    text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。',
+    img: 'https://bulma.io/images/placeholders/640x320.png',
+    alt: 'テキストが入ります。',
+    link: '#'
+  },
+  {
+    title: 'タイトル',
+    text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。',
+    img: 'https://bulma.io/images/placeholders/640x320.png',
+    alt: 'テキストが入ります。',
+    link: '#'
+  },
+  {
+    title: 'タイトル',
+    text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。',
+    img: 'https://bulma.io/images/placeholders/640x320.png',
+    alt: 'テキストが入ります。',
+    link: '#'
+  }
+] -%}
+<div class="news-section container">
+<h2 class="news-section__title">NEWS</h2>
+{{ newsList.normal(newsData) }}
+</div>

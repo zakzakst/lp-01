@@ -1,0 +1,25 @@
+// 変数
+@import "./base/_variables.scss";
+
+// ライブラリ
+$link: $color-primary;
+@import "../../node_modules/bulma/bulma.sass";
+
+// 共通
+@import "./common/_common.scss";
+@import "./common/_utility.scss";
+@import "./common/_header.scss";
+@import "./common/_footer.scss";
+@import "./common/_go-top.scss";
+
+// 各種パーツ
+@import "./component/_news-list.scss";
+@import "./component/_gallery.scss";
+
+// 各セクション
+@import "./section/_hero-section.scss";
+@import "./section/_about-section.scss";
+@import "./section/_service-section.scss";
+@import "./section/_news-section.scss";
+@import "./section/_gallery-section.scss";
+@import "./section/_contact-section.scss";
