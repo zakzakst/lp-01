@@ -8,7 +8,7 @@ import { formValidate } from './_module/form-validate';
 
 $(function() {
   goTop();
-  // headerScripts();
+  headerScripts();
   // pageLoader();
   openAnim();
   scrollAnim();

@@ -10,14 +10,18 @@
 .go-top__btn,
 .go-top__btn:hover,
 .go-top__btn:focus {
-  color: #fff;
-  background: $color-primary--darker;
+  color: $color-primary--darker;
   border-color: $color-primary--darker;
 }
 
 .go-top__btn {
+  border-radius: 25px;
   transition: transform $transition-fast;
   &:hover {
     transform: scale(1.1);
   }
+}
+
+.button.go-top__btn:focus {
+  box-shadow: none;
 }

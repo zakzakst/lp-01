@@ -1,26 +1,23 @@
 <header>
-  <nav class="header__navbar navbar is-transparent is-fixed-top" id="js-header__navbar" role="navigation" aria-label="ヘッダーナビゲーション">
-    <div class="container">
-      <div class="navbar-brand">
-        <!-- ロゴ画像 -->
-        <a class="navbar-item" href="/">
-          <img src="/img/common/logo.png">
-        </a>
-        <!-- ハンバーガーメニュー（スマホ時のみ） -->
-        <a role="button" class="navbar-burger" id="js-header__navbar-button">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-      </div>
-      <!-- メニュー -->
-      <div class="navbar-menu" id="js-header__navbar-menu">
-        <div class="navbar-end">
-          {%- for navItem in siteData.navList -%}
-          <a class="navbar-item{{ ' is-active' if navItem.name == pageData.nav }}" href="{{ navItem.path }}" data-link-name="{{ navItem.name }}">{{ navItem.name }}</a>
-          {%- endfor -%}
-        </div>
-      </div>
+  <a href="#" id="js-header-btn" class="header__btn">
+    <div class="header__bar">
+      <div class="header__bar-item"></div>
+      <div class="header__bar-item"></div>
+      <div class="header__bar-item"></div>
     </div>
-  </nav>
+  </a>
+  <div id="js-header-menu" class="menu">
+    <div class="menu__bg">
+      <div class="menu__bg-item"></div>
+      <div class="menu__bg-item"></div>
+      <div class="menu__bg-item"></div>
+      <div class="menu__bg-item"></div>
+    </div>
+    <ul class="menu__nav">
+      <li><a class="menu__nav-item" href="#">PAGE 01</a></li>
+      <li><a class="menu__nav-item" href="#">PAGE 02</a></li>
+      <li><a class="menu__nav-item" href="#">PAGE 03</a></li>
+      <li><a class="menu__nav-item" href="#">PAGE 04</a></li>
+    </ul>
+  </div>
 </header>
