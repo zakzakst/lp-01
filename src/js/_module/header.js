@@ -1,67 +1,59 @@
 import $ from 'jquery';
+import { gsap } from "gsap";
 
 export function headerScripts() {
-  const el = $('#js-header__navbar');
-  if(!el) {return;}
-  const menu = $('#js-header__navbar-menu');
-  const button = $('#js-header__navbar-button');
-  const speed = 400;
-
-  addEventToggleMenu();
-  addEventRisizeReset();
-  addObserverHederBg();
-
-  function addEventToggleMenu() {
-    button.on('click', (e) => {
-      e.preventDefault();
-      if(el.hasClass('is-open')) {
-        menuClose();
-      } else {
-        menuOpen();
-      }
-    });
-  }
-
-  function addEventRisizeReset() {
-    $(window).resize(() => {
-      menuClear();
-    });
-  }
-
-  function menuOpen() {
-    menu.slideDown(speed);
-    el.addClass('is-open');
-    button.addClass('is-active');
-  }
-
-  function menuClose() {
-    menu.slideUp(speed, () => {
-      el.removeClass('is-open');
-      button.removeClass('is-active');
-    });
-  }
-
-  function menuClear() {
-    menu.css('display', '');
-    el.removeClass('is-open');
-    button.removeClass('is-active');
-  }
-
-  function addObserverHederBg() {
-    const options = {
-      root: null,
-      rootMargin: '2% 0px -102%',
-      threshold: 0
+  $('#js-header-btn').on('click', e => {
+    e.preventDefault();
+    const headerBtn = $('#js-header-btn');
+    if(headerBtn.hasClass('is-active')) {
+      headerMenuClose();
+    } else {
+      headerMenuOpen();
     }
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          el.addClass('is-show-bg');
-        } else {
-          el.removeClass('is-show-bg');
-        }
-      });
-    }, options);
-    observer.observe(document.body);
-  }
+  });
+}
+
+function headerMenuOpen() {
+  $('#js-header-btn').addClass('is-active');
+  const tl = gsap.timeline();
+  tl.set('#js-header-menu', {
+    display: 'block'
+  })
+  .to('.menu__bg-item', {
+    duration: .2,
+    width: '26%',
+    stagger: {
+      each: 0.1
+    }
+  })
+  .to('.menu__nav-item', {
+    delay: .2,
+    duration: .3,
+    x: 0,
+    opacity: 1
+  });
+}
+
+function headerMenuClose() {
+  $('#js-header-btn').removeClass('is-active');
+  const tl = gsap.timeline();
+  tl.set('.menu__bg-item', {
+    width: '25%'
+  })
+  .to('.menu__nav-item', {
+    duration: .3,
+    x: 20,
+    opacity: 0
+  })
+  .to('.menu__bg-item', {
+    delay: .2,
+    duration: .2,
+    scaleX: 0,
+    stagger: {
+      each: 0.1
+    }
+  })
+  .set(['#js-header-menu', '.menu__bg-item', '.menu__nav-item'], {
+    clearProps: 'all'
+  });
 }
