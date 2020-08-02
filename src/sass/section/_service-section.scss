@@ -1,0 +1,35 @@
+.service-section {
+  padding: 48px 0;
+}
+
+.service__img-wrapper {
+  position: relative;
+  height: 100vh;
+}
+
+.service__img {
+  position: absolute;
+  display: block;
+  width: 75%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: opacity $transition-slow;
+  &.is-active {
+    opacity: 1;
+  }
+}
+
+.service__content {
+  padding: 48px 0;
+}
+
+.service__ttl {
+  margin-bottom: 8px;
+  font-size: $font-size-xl;
+}
+
+.service__txt:not(:last-child) {
+  margin-bottom: 8px;
+}
