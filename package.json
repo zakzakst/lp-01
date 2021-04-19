@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "bulma": "^0.8.2",
-    "gsap": "^3.4.2",
+    "gsap": "^3.6.0",
     "jquery": "^3.5.1"
   },
   "description": ""
