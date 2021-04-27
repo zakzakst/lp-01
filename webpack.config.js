@@ -9,7 +9,7 @@ module.exports = {
     path: `${__dirname}/dist/js`,
     filename: '[name].js'
   },
-  mode: 'development', // production development
+  mode: 'production', // production development
   module: {
     rules: [
       {

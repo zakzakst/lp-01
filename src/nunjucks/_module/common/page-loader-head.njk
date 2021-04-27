@@ -62,6 +62,7 @@
 
 <script>
 setTimeout(() => {
+  if (!document.getElementById('js-page-loader')) return;
   document.getElementById('js-page-loader').style.display = 'none';
 }, 10000);
 </script>
